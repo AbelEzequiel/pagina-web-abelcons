@@ -1,0 +1,350 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+/*-------TIPOGRAFIA------*/
+@font-face {
+    font-family: "CreteRound-Regular";
+    src: url("../Fonts/CreteRound-Regular.otf"); /*TITULO*/
+}
+@font-face {
+    font-family: "SF_Collegiate_Solid";
+    src: url("../Fonts/SF_Collegiate_Solid.ttf"); /*SUB-TITULO*/
+}
+@font-face {
+    font-family: "Walkway_Oblique_Bold";
+    src: url("../Fonts/Walkway_Bold.ttf"); /*TEXTO importante de la pagina*/
+}
+/*-------Barra de Menu-------*/
+ 
+header {
+    background-color: #016392;
+}
+.nav-item {
+    background-color: #fff;
+}
+.lgoauto {
+    height: 100px;
+    width: auto;
+}
+.nav-link {
+    font-family: "SF_Collegiate_Solid";
+    text-transform: uppercase;
+    list-style-type: none;
+    color: black;                
+}
+.nav-link:hover {
+    color: #73A9AD
+}
+/*------ CARROUSEL ------- */
+.carrouselSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carrouselTamaño {
+    height: 70%;
+    width: auto
+}
+.fotoCarrusel{  
+    height: 500px;
+    width: auto;
+}
+/* ----------- INICIO ----------- */ 
+/*---- GRILLA OFERTAS DESTACADAS ----*/
+body {
+    background-color: #fff;
+}
+/*------Contenedor Caja Padre Grid------*/
+.columnaGridPrincipal {
+    display: grid;
+    width: 80%;
+    height: 800px;  
+    gap: 1rem;
+    justify-content: center;
+
+    grid-template-columns: 30% 15% 30% 15%;
+    grid-template-rows: 100px 450px 200px 100px 100px 200px;  
+    
+    grid-template-areas:
+    
+    "tituloGrilla tituloGrilla tituloGrilla tituloGrilla"
+    "contenedorFoto1 contenedorImagenes contenedorFoto2 contenedorImagenes2"
+    "contenedorTextoAuto contenedorTextoAuto contenedorTextoAuto2 contenedorTextoAuto2"
+    "0 0 0 0"
+    "tituloUIncorporaciones tituloUIncorporaciones tituloUIncorporaciones tituloUIncorporaciones"
+    "footerflex footerflex footerflex footerflex";
+}
+/*-----Contenedor Cajas Hijas Grilla----*/
+.tituloGrilla {
+    grid-area: tituloGrilla;
+    background-color: #016392;
+}
+.contenedorFoto1 {
+    grid-area: contenedorFoto1;
+}
+.contenedorImagenes {
+    grid-area: contenedorImagenes;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+} 
+.contenedorFoto2 {
+    grid-area: contenedorFoto2;
+}
+.contenedorImagenes2 {
+    grid-area: contenedorImagenes2;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}  
+.centrado {
+    /* COMBINANDO GRID CON FLEXBOX */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "SF_Collegiate_Solid";
+    letter-spacing: 5px; 
+}
+.columnaGridPrincipal {
+    border-color: 2px solid red;
+    height: 600px;
+    width: auto;
+    justify-content: center;
+}
+.cocheGrande {
+    display: flex;
+    height: 400px;
+    width: auto;
+}
+.cocheChico {
+    display: flex;
+    height: 200px;
+    width: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+/*---- Grilla Descripcion AUTOS ---- */
+.contenedorTextoAuto {
+    grid-area: contenedorTextoAuto;
+    width: auto;
+    height: 200px;
+    background-color: #231f20;
+    color: #fff;
+    border: 5px solid #025464;
+}
+.listaDestacada {
+    font-family: "Walkway_Oblique_Bold";
+    text-transform: uppercase;
+    font-size: 15px;
+    display: flex;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    flex-wrap: wrap ;
+}
+.contenedorTextoAuto2 {
+    grid-area: contenedorTextoAuto2;
+    width: auto;
+    height: auto;
+    background-color: #231f20;
+    color: #fff;
+    border: 5px solid #025464;
+}
+/*----- ENLACE CLIENTES / ENLACE COMPRAS ----- */
+.tituloClientes , .tituloCompra{
+    width: 90%;
+    font-family: "SF_Collegiate_Solid";
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    background-color: #231f20;
+    color: #fff;
+    margin: 10px 5% 1px 5%;     
+    letter-spacing: 5px;
+}
+/*----- CAJA FLEX clientes y compra ----- */
+.cajaFlex {
+    width: 90%;
+    height: 900px;
+    margin: 1px 5% 1px 5%;
+    background-color: #016392;
+    padding: 10px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+.clientes{
+     flex-flow: column wrap;
+     justify-content: space-evenly; 
+}
+.compra {
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+.fotoClientes , .fotoAutos{
+    width: 270px;
+    height: auto;
+    background-color: #3F4E4F;
+    padding: 10px;
+    margin: 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+/* ----- ENLACE GESTORIA / ENLACE CONTACTO ----*/
+.tituloContacto , .tituloGestoria {
+    width: 70%;
+    font-family: "SF_Collegiate_Solid";
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    background-color: #231f20;
+    color: #fff;
+    margin: 10px 5% 1px 15%;     
+    letter-spacing: 5px;    
+}
+.infoGestoria {
+   font-family: "Walkway_Oblique_Bold";
+   justify-content: start;
+
+}
+/* ------ contacto y gestoria -----*/
+.imgGestoria, .imgContacto  {
+    height: 500px;
+    width: auto;
+}
+.listNone {
+    list-style: none;
+}
+/*----- FOOTER ----*/    
+.footerflex {
+    grid-area: footerflex;
+    display: flex;
+    background-color: #231f20;
+}
+.tituloUIncorporaciones {
+    grid-area: tituloUIncorporaciones;
+    background-color: #016392;
+}
+.containerfooter {
+    display: flex;
+}
+.footerimagen {
+    display: flex;
+    height: 200px;
+    width: auto;
+}
+/*------- MEDIA QUERIES SWICH MOVIL -----*/
+@media screen and (max-width: 767px) {
+  /* SWITCH PARA CAMBIAR OCULTO/VISIBLE MENU MOBILE */
+  .displaySwitch {
+    display: flex;
+    }
+
+    /********* CARROUSEL *********/
+    .fotoCarrusel  {
+        height: 145px;
+        width: auto;
+    }
+
+    /********* CONTENEDOR GRID *********/
+    .columnaGridPrincipal {
+        display: block;
+    }
+    .contenedorImagenes , .contenedorImagenes2 {
+        display: none;
+    }
+    .contenedorTextoAuto {
+        order: -1;
+    }
+    .cocheGrande {
+        width: 300px;
+        height: auto;
+    }
+    .footerflex {
+        display: block;
+    }
+    .containerfooter{
+        align-items: center;
+        justify-content: center;
+    }
+    .footerimagen {
+        display: flex;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .p {
+        font-size: 10px;
+    }
+    
+    /***COMPRA y CLIENTES****/
+    .cajaFlex {
+        display: block;
+        height: 2500px;
+    }   
+   .fotoClientes {
+        height: 200px;
+        width: auto;
+   }
+    /***CONTACTO Y GESTORIA ****/
+    .imgGestoria , .imgContacto{
+        height: 250px;
+        width: 250px;
+    }
+    .tituloGestoria {
+       letter-spacing: 0;
+       align-items: center;
+       justify-content: center;
+    }
+
+}
+/*------- MEDIA QUERIES TABLET -----*/
+@media screen and (min-width: 767px) and (max-width:1024px){
+    /* SWITCH PARA CAMBIAR OCULTO/VISIBLE MENU MOBILE */
+    .displaySwitch {
+      display: flex;
+      }
+      .columnaGridPrincipal {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 150px 200px 120px 200px 120px 60px 150px 200px;
+        grid-template-areas:
+            "tituloGrilla tituloGrilla"
+            "contenedorFoto1 contenedorImagenes"
+            "contenedorTextoAuto contenedorTextoAuto "
+            "contenedorFoto2 contenedorImagenes2"
+            "contenedorTextoAuto2 contenedorTextoAuto2"
+            "0 0"
+            "tituloUIncorporaciones tituloUIncorporaciones"
+            "footerflex footerflex";
+   }
+       /********* CARROUSEL *********/
+       .fotoCarrusel  {
+        height: 200px;
+        width: auto;
+    }
+   .contenedorImagenes , .contenedorImagenes2 , .contenedorFoto1 , .contenedorFoto2 {
+    display: flex;
+    align-items: center;
+    display: center;
+   }
+   .cocheGrande {
+    height: 200px;
+    width: auto;
+   }
+   .contenedorTextoAuto {
+    height: 120px;
+    width: auto;
+   }
+   /******* CLIENTES ******/ 
+   .fotoClientes {
+    height: 200px;
+    width: auto;
+   }
+
+}  
